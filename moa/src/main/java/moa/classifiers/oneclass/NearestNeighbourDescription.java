@@ -130,8 +130,8 @@ public class NearestNeighbourDescription extends AbstractClassifier implements C
 
 		if(this.neighbourhood.size() > 2)
 		{
-			votes[1] = Math.pow(2.0, -1.0 * this.getAnomalyScore(inst) / this.tau);
-			votes[0] = 1.0 - votes[1];
+			votes[0] = Math.pow(2.0, -1.0 * this.getAnomalyScore(inst) / this.tau);
+			votes[1] = 1.0 - votes[0];
 		}
 				
 		return votes;
